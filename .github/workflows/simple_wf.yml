@@ -23,7 +23,7 @@ jobs:
           uses: ./.github/actions/action_1.2
         - name: 1.3 Adding information to LOG
           run: |
-              echo "Version is ${{ github.event.inputs.version }} >> /home/runner/work/devops-school/devops-school/log.md
+              echo "Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
         - name: 1.4 DOWNLOAD ARTIFACT
           uses: actions/upload-artifact@v2
           with:
