@@ -2,6 +2,11 @@ name: Simple Workflow
 
 on:
     workflow_dispatch:
+      inputs:
+        version:
+          description: Bump  Version
+          default: v1.0.0
+          required: true
 
 jobs:
 
@@ -9,6 +14,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+        - name: BPV
+          run: git tag ${{ github.event.inputs.version }}
         - uses: actions/checkout@v2
         - name: 1.1 UPLOADING FILES
           run: |
