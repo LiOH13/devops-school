@@ -14,8 +14,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: BPV
-          run: git tag ${{ github.event.inputs.version }}
         - uses: actions/checkout@v2
         - name: 1.1 UPLOADING FILES
           run: |
