@@ -25,6 +25,7 @@ jobs:
           run: |
             ls -lah /home/runner/work/devops-school/devops-school/
             whoami
+            sudo cat /etc/group
             sudo chmod 666 /home/runner/work/devops-school/devops-school/log.md
             echo " Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
         - name: 1.4 DOWNLOAD ARTIFACT
