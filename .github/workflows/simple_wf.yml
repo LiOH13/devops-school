@@ -23,8 +23,10 @@ jobs:
           uses: ./.github/actions/action_1.2
         - name: 1.3 Adding information to LOG
           run: |
-            sudo chmod 666 /home/runner/work/devops-school/devops-school/log.md
-            sudo echo " Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
+            ll /home/runner/work/devops-school/devops-school/
+            whoami
+            chmod 666 /home/runner/work/devops-school/devops-school/log.md
+            echo " Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
         - name: 1.4 DOWNLOAD ARTIFACT
           uses: actions/upload-artifact@v2
           with:
