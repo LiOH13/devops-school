@@ -4,8 +4,8 @@ on:
     workflow_dispatch:
       inputs:
         version:
-          description: Bump  Version
-          default: v1.0.0
+          description: Version
+          default: v3.1.2
           required: true
 
 jobs:
