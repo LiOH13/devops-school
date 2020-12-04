@@ -27,7 +27,8 @@ jobs:
             GITHUB_BASE_REF=${{ github.event.inputs.version }}
             echo $GITHUB_BASE_REF
             sudo chmod 666 /home/runner/work/devops-school/devops-school/log.md
-            echo " Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
+            echo $GITHUB_BASE_REF >> /home/runner/work/devops-school/devops-school/log.md
+            #echo " Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
         - name: 1.4 DOWNLOAD ARTIFACT
           uses: actions/upload-artifact@v2
           with:
