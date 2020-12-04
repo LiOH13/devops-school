@@ -23,7 +23,7 @@ jobs:
           uses: ./.github/actions/action_1.2
         - name: 1.3 Adding information to LOG
           run: |
-            env
+            echo $GITHUB_EVENT_INPUTS_VERSION
             ls -lah /home/runner/work/devops-school/devops-school/
             whoami
             sudo cat /etc/group
