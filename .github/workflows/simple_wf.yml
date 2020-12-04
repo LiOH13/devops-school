@@ -24,7 +24,8 @@ jobs:
         - name: 1.3 Adding information to LOG
           run: |
             echo $GITHUB_EVENT_PATH
-            echo $INPUT_VERSION
+            GITHUB_BASE_REF=${{ github.event.inputs.version }}
+            echo $GITHUB_BASE_REF
             sudo chmod 666 /home/runner/work/devops-school/devops-school/log.md
             echo " Version is ${{ github.event.inputs.version }}" >> /home/runner/work/devops-school/devops-school/log.md
         - name: 1.4 DOWNLOAD ARTIFACT
