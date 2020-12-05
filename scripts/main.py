@@ -2,7 +2,7 @@ from datetime import datetime
 import os
 
 print("PRINT FROM PYTHON: ACTION 1.2 - STARTED")
-print(os.environ["USER"])
+print(os.environ)
 
 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
