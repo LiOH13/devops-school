@@ -1,6 +1,10 @@
 from datetime import datetime
+import os
 
 print("PRINT FROM PYTHON: ACTION 1.2 - STARTED")
+print(os.name)
+print(github.event.inputs.version)
+print(os.getenv("github.event.inputs.version"))
 
 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
