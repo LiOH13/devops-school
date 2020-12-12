@@ -3,9 +3,9 @@ import os
 
 print("PRINT FROM PYTHON: ACTION 1.2 - STARTED")
 
-reff = ${{ github.ref }}
-
-print(reff)
+for a in os.environ:
+    print('Var: ', a, 'Value: ', os.getenv(a))
+print("all done")
 
 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
