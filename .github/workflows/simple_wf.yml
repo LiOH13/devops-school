@@ -7,11 +7,13 @@ on:
           description: Version
           default: v3.1.2
           required: true
-
 jobs:
 
     TIMESTAMP:
         runs-on: ubuntu-latest
+        
+        env:
+          input: environment variable
 
         steps:
         - uses: actions/checkout@v2
@@ -21,6 +23,8 @@ jobs:
             echo "Version is ${{ github.event.inputs.version }}"
         - name: 1.2 EXECUTING THE PYTHON SCRIPT
           uses: ./.github/actions/action_1.2
+          with:
+            who-to-greet: ${{ env.input }}
         - name: 1.3 Adding information to LOG
           run: |
             sudo chmod 666 /home/runner/work/devops-school/devops-school/log.md
